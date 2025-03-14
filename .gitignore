@@ -1,0 +1,19 @@
+# Backup files
+
+*~
+
+
+# Auto Save
+# See also:
+#   * `(info "(emacs) Auto Save Control")'
+
+auto-save-list/
+\#*#
+
+
+# Native compilation
+# See also:
+#   * `(info "(elisp) Native Compilation")'
+#   * `native-comp-eln-load-path'
+
+eln-cache/
