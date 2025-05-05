@@ -40,3 +40,6 @@
   :hook (mhtml-mode css-mode web-mode)
   :custom
   (emmet-self-closing-tag-style "" "No need since we just dabble in HTML 5."))
+
+(use-package avy
+  :bind ("M-g M-g" . avy-goto-line))
