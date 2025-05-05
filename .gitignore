@@ -19,6 +19,13 @@ auto-save-list/
 eln-cache/
 
 
+# Package installation
+# See also:
+#  * `package-user-dir`
+
+elpa/
+
+
 # Transient
 
 transient/
