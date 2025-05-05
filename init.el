@@ -12,5 +12,7 @@
 (use-package use-package-ensure
   :custom (use-package-always-ensure t))
 
+(setq backup-inhibited t)               ; TODO: Actually fix backing up.
+
 (use-package magit
   :bind ("<f12>" . magit-status))
