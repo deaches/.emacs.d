@@ -17,3 +17,8 @@ auto-save-list/
 #   * `native-comp-eln-load-path'
 
 eln-cache/
+
+
+# Transient
+
+transient/
