@@ -29,3 +29,14 @@
   :ensure auctex
   :custom
   (ConTeXt-Mark-version "IV" "For some reason AucTeX defaults to MkII"))
+
+(use-package web-mode
+  :mode (((rx ".liquid" string-end) . web-mode)
+	 ((rx ".njk"    string-end) . web-mode))
+  :custom
+  (web-mode-markup-indent-offset 2))
+
+(use-package emmet-mode
+  :hook (mhtml-mode css-mode web-mode)
+  :custom
+  (emmet-self-closing-tag-style "" "No need since we just dabble in HTML 5."))
