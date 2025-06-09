@@ -14,6 +14,10 @@
 
 (setq backup-inhibited t)               ; TODO: Actually fix backing up.
 
+(use-package modus-themes
+  :config (load-theme 'modus-operandi :no-confirm))
+(set-frame-font "IosevkaCustom-13")
+
 (use-package magit
   :bind ("<f12>" . magit-status))
 
