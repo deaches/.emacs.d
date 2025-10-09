@@ -16,7 +16,11 @@
 
 (use-package modus-themes
   :config (load-theme 'modus-operandi :no-confirm))
-(set-frame-font "IosevkaCustom-13")
+
+(use-package info
+  :bind (:map Info-mode-map
+	 ("<mouse-8>" . Info-history-back)
+	 ("<mouse-9>" . Info-history-forward)))
 
 (use-package magit
   :bind ("<f12>" . magit-status))
