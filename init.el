@@ -44,6 +44,9 @@
   :custom
   (web-mode-markup-indent-offset 2))
 
+(use-package markdown-mode
+  :custom (markdown-italic-underscore t))
+
 (use-package emmet-mode
   :hook (mhtml-mode css-mode web-mode)
   :custom
