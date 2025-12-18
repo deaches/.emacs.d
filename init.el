@@ -54,3 +54,18 @@
 
 (use-package avy
   :bind ("M-g M-g" . avy-goto-line))
+
+(use-package typst-ts-mode
+  :if (featurep 'treesit)
+  :mode ((rx ".typ" string-end) . typst-ts-mode)
+  :init
+  ;; Decided to go with a parser linked from the tree-sitter wiki instead of the fork
+  ;; linked in typst-ts-mode since the fork doesn't seem to have critical changes.
+  ;; Even GitHub shows it as up-to-date with the original.
+  ;; Additionally, if the original is ever updated (unlikely?), the fork may be outdated.
+  (add-to-list 'treesit-language-source-alist
+               '(typst . ("https://github.com/uben0/tree-sitter-typst")))
+  :config
+  (unless (treesit-language-available-p 'typst)
+    ;; If the grammar _does_ get updated, evaluate (typst-ts-mc-install-grammar) instead.
+    (treesit-language-install-grammar 'typst)))
