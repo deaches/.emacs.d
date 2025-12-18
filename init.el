@@ -19,8 +19,8 @@
 
 (use-package info
   :bind (:map Info-mode-map
-	 ("<mouse-8>" . Info-history-back)
-	 ("<mouse-9>" . Info-history-forward)))
+         ("<mouse-8>" . Info-history-back)
+         ("<mouse-9>" . Info-history-forward)))
 
 (use-package magit
   :bind ("<f12>" . magit-status))
@@ -40,7 +40,7 @@
 
 (use-package web-mode
   :mode (((rx ".liquid" string-end) . web-mode)
-	 ((rx ".njk"    string-end) . web-mode))
+         ((rx ".njk"    string-end) . web-mode))
   :custom
   (web-mode-markup-indent-offset 2))
 
