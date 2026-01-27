@@ -22,6 +22,11 @@
          ("<mouse-8>" . Info-history-back)
          ("<mouse-9>" . Info-history-forward)))
 
+(use-package help
+  :bind (:map help-mode-map
+         ("<mouse-8>" . help-go-back)
+         ("<mouse-9>" . help-go-forward)))
+
 (use-package magit
   :bind ("<f12>" . magit-status))
 
